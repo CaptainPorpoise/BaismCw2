@@ -13,3 +13,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+.venv/
+*.jks
+*.keystore
+/mobsfscan.json

@@ -1,17 +1,29 @@
 package com.example.baismcw2
 
+import org.junit.Assert.assertEquals
+import org.junit.Assert.assertThrows
 import org.junit.Test
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun standardDiscount() {
+        val result = DiscountCalculator.calculate("200", "15")
+
+        assertEquals("170.00", result.finalPrice.toPlainString())
+    }
+
+    @Test
+    fun zeroDiscount() {
+        val result = DiscountCalculator.calculate("200", "0")
+
+        assertEquals("200.00", result.finalPrice.toPlainString())
+    }
+
+    @Test
+    fun invalidDiscountIsRejected() {
+        assertThrows(IllegalArgumentException::class.java) {
+            DiscountCalculator.calculate("200", "110")
+        }
     }
 }

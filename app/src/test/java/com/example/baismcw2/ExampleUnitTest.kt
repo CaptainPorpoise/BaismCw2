@@ -4,6 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows
 import org.junit.Test
 
+// Testy kalkulatora rabatu — poprawny przebieg CI.
 class ExampleUnitTest {
 
     @Test

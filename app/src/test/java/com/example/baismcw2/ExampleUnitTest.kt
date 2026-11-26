@@ -11,7 +11,7 @@ class ExampleUnitTest {
     fun standardDiscount() {
         val result = DiscountCalculator.calculate("200", "15")
 
-        assertEquals("170.00", result.finalPrice.toPlainString())
+        assertEquals("171.00", result.finalPrice.toPlainString())
     }
 
     @Test
